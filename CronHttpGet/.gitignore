@@ -4,3 +4,8 @@ airflow_home/logs
 airflow_home/airflow.db
 airflow_home/airflow.cfg
 airflow_home/unittests.cfg
+airflow_home/airflow-webserver.err
+airflow_home/airflow-webserver.log
+airflow_home/airflow-webserver.out
+airflow_home/airflow-webserver.pid
+airflow_home/airflow-webserver-monitor.pid
