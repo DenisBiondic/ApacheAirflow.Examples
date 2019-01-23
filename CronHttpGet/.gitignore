@@ -1,2 +1,6 @@
 venv
 .idea/workspace.xml
+airflow_home/logs
+airflow_home/airflow.db
+airflow_home/airflow.cfg
+airflow_home/unittests.cfg
