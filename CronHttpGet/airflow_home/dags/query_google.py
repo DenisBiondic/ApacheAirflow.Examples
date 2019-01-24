@@ -1,10 +1,20 @@
 from datetime import datetime
 
-from airflow import DAG
+from airflow import DAG,settings
+from airflow.models import Connection
 from airflow.operators.http_operator import SimpleHttpOperator
 
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+conn = Connection(
+        conn_id='http_google',
+        conn_type='http',
+        host='https://google.de')
+
+session = settings.Session()
+session.add(conn)
+session.commit()
 
 default_args = {
     'owner': 'airflow',

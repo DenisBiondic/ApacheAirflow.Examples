@@ -1,0 +1,20 @@
+version: '3'
+services:
+    postgres:
+        image: postgres:9.6
+        environment:
+            - POSTGRES_USER=airflow
+            - POSTGRES_PASSWORD=airflow
+            - POSTGRES_DB=airflow
+
+    webserver:
+        image: dbionorth.azurecr.io/myairflow
+        build: .
+        depends_on:
+            - postgres
+        environment:
+            - LOAD_EX=n
+            - EXECUTOR=Local
+        ports:
+            - "8080:8080"
+        command: webserver
