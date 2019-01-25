@@ -9,3 +9,4 @@ airflow_home/airflow-webserver.log
 airflow_home/airflow-webserver.out
 airflow_home/airflow-webserver.pid
 airflow_home/airflow-webserver-monitor.pid
+airflow_home/dags/__pycache__
