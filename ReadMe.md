@@ -1,4 +1,4 @@
-This repository contains a personal collection of Apache Airflow examples. 
+This repository contains a personal collection of Apache Airflow examples. Developed on Ubuntu 18.04. 
 
 # How to (relevant for each example)
 
