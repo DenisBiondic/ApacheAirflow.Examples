@@ -8,7 +8,7 @@ services:
             - POSTGRES_DB=airflow
 
     webserver:
-        image: dbionorth.azurecr.io/myairflow
+        image: myairflow
         build: .
         depends_on:
             - postgres

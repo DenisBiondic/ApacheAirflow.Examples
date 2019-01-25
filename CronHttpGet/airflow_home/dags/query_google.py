@@ -7,6 +7,7 @@ from airflow.operators.http_operator import SimpleHttpOperator
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+# will add connection every time, so should actually check first if connection is already there
 conn = Connection(
         conn_id='http_google',
         conn_type='http',
@@ -26,7 +27,7 @@ default_args = {
     'retries': 0,
 }
 
-dag = DAG('query_google', default_args=default_args, schedule_interval='* * * * *')
+dag = DAG('query_google', default_args=default_args, schedule_interval='* * * * *') # each minute
 
 t1 = SimpleHttpOperator(
     task_id='the_query',
